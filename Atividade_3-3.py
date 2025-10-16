@@ -1,5 +1,7 @@
 import numpy as np
 
+# --- DEFINIÇÃO DAS FUNÇÕES DE CÁLCULO ---
+
 def calcular_vetor_posicao(t: float) -> np.ndarray:
     """
     Calcula o vetor posição r(t) para um dado tempo t.
@@ -12,12 +14,8 @@ def calcular_vetor_posicao(t: float) -> np.ndarray:
     Returns:
         numpy.ndarray: Um array NumPy representando o vetor posição [x, y] em cm.
     """
-    # Componente x do vetor
     x = 4.0 + (2.5 * (t ** 2))
-
-    #Componente y do vetor
     y = 5.0 * t
-
     return np.array([x, y])
 
 def calcular_velocidade_media(t1: float, t2: float) -> np.ndarray:
@@ -31,64 +29,75 @@ def calcular_velocidade_media(t1: float, t2: float) -> np.ndarray:
         t2 (float): O tempo final em segundos (s).
 
     Returns:
-        numpy.ndarray: Um array NumPy representando o vetor velocidade média [vx, vy] em cm/s.
+        numpy.ndarray: Vetor velocidade média [vx, vy] em cm/s.
     
     Raises:
         ValueError: Se t1 e t2 forem iguais, para evitar divisão por zero.
     """
-    #Calcula a variação do tempo
     delta_t = t2 - t1
-
-    #Validação para evitar divisão por zero
     if delta_t == 0:
         raise ValueError("O tempo inicial (t1) e final (t2) não podem ser iguais.")
 
-    #Calcula as posições e a variação
     r1 = calcular_vetor_posicao(t1)
     r2 = calcular_vetor_posicao(t2)
     delta_r = r2 - r1
     
-    #Calcula o vetor velocidade média
     velocidade_media = delta_r / delta_t
     return velocidade_media
 
-def calcular_velocidade_intantanea(t: float) -> np.ndarray:
+def calcular_velocidade_instantanea(t: float) -> np.ndarray:
     """
     Calcula o vetor velocidade instantânea v(t) para um dado tempo t.
 
     A equação é a derivada do vetor posição: v(t) = (5.0 * t)î + 5.0ĵ
 
     Args:
-        t (float): O tempo em segundos (s) no qual a velocidade será calculada.
+        t (float): O instante de tempo em segundos (s).
 
     Returns:
-        numpy.ndarray: Um array NumPy representando o vetor velocidade [vx, vy] em cm/s.
+        numpy.ndarray: Vetor velocidade instantânea [vx, vy] em cm/s.
     """
+    vx = 5.0 * t
+    vy = 5.0
+    return np.array([vx, vy])
 
-#--- Seção de Execução Principal ---
 if __name__ == "__main__":
-    # Definição do intervalo de tempo
-    t_inicial = 0.0  #em segundos
-    t_final = 2.0    #em segundos
+    
+    #--- Exemplo 1: Cálculo da Velocidade Média ---
+    print("--- CÁLCULO DA VELOCIDADE MÉDIA ---")
+    t_inicial = 0.0
+    t_final = 2.0
 
     try:
-        #--- Calculamos as posições aqui para poder usá-las no print ---
+        #Calcula as posições para exibição
         posicao_inicial = calcular_vetor_posicao(t_inicial)
         posicao_final = calcular_vetor_posicao(t_final)
-
-        #Chama a função para calcular a velocidade média
+        
+        #Calcula a velocidade média
         v_media = calcular_velocidade_media(t_inicial, t_final)
 
-        #--- Impressão dos Resultados ---
-        print(f"Calculando a velocidade média entre t = {t_inicial}s e t = {t_final}s:")
-        
-        #--- CORREÇÃO: Usamos as variáveis definidas acima (posicao_inicial e posicao_final) ---
-        print(f"Vetor posição em t1 = {t_inicial}s: r({t_inicial}) = {posicao_inicial[0]} î + {posicao_inicial[1]} ĵ cm")
-        print(f"Vetor posição em t2 = {t_final}s: r({t_final}) = {posicao_final[0]} î + {posicao_final[1]} ĵ cm")
-        
-        print("-" * 40)
-        print("Resultado:")
-        print(f"O vetor velocidade média é: v_med = {v_media[0]} î + {v_media[1]} ĵ (em cm/s)")
+        #Imprime os resultados
+        print(f"Intervalo de tempo: de t = {t_inicial}s até t = {t_final}s")
+        print(f"Posição inicial r({t_inicial}) = {posicao_inicial[0]} î + {posicao_inicial[1]} ĵ cm")
+        print(f"Posição final   r({t_final}) = {posicao_final[0]} î + {posicao_final[1]} ĵ cm")
+        print("-" * 25)
+        print(f"Velocidade média = {v_media[0]} î + {v_media[1]} ĵ (em cm/s)")
 
     except ValueError as e:
         print(f"Erro no cálculo: {e}")
+
+    print("\n" + "="*40 + "\n")
+
+    #--- Exemplo 2: Cálculo da Velocidade Instantânea ---
+    print("--- CÁLCULO DA VELOCIDADE INSTANTÂNEA ---")
+    
+    #Podemos usar o mesmo tempo final do exemplo anterior para comparar
+    tempo_instantaneo = 2.0
+
+    #Calcula a velocidade instantânea
+    v_instantanea = calcular_velocidade_instantanea(tempo_instantaneo)
+
+    #Imprime os resultados
+    print(f"Instante de tempo: t = {tempo_instantaneo}s")
+    print("-" * 25)
+    print(f"Velocidade instantânea v({tempo_instantaneo}) = {v_instantanea[0]} î + {v_instantanea[1]} ĵ (em cm/s)")
