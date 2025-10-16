@@ -21,6 +21,20 @@ def calcular_vetor_posicao(t):
     #Retorna o vetor como um array NumPy [x, y]
     return np.array([x, y])
 
+def calcular_velocidade_media(t1, t2):
+    """
+    Calcula o vetor velocidade média entre dois instantes de tempo, t1 e t2.
+
+    A fórmula é: v_med = (r(t2) - r(t1)) / (t2 - t1)
+
+    Args:
+        t1 (float): O tempo inicial em segundos (s).
+        t2 (float): O tempo final em segundos (s).
+
+    Returns:
+        numpy.ndarray: Um array NumPy representando o vetor velocidade média [vx, vy] em cm/s.
+    """
+
 # Atividade
 #Definir o tempo para o qual queremos calcular
 t1 = 0.0 #em segundos
