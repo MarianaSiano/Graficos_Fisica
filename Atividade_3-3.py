@@ -3,6 +3,7 @@ import math
 import matplotlib.pyplot as plt
 
 #--- DEFINIÇÃO DAS FUNÇÕES DE CÁLCULO ---
+
 def calcular_vetor_posicao(t: float) -> np.ndarray:
     """
     Calcula o vetor posição r(t) para um dado tempo t.
@@ -45,6 +46,7 @@ def analisar_vetor(vetor: np.ndarray) -> tuple[float, float]:
     angulo_graus = math.degrees(angulo_rad)
     return modulo, angulo_graus
 
+
 #--- SEÇÃO DE EXECUÇÃO PRINCIPAL ---
 if __name__ == "__main__":
     t_inicial = 0.0
@@ -71,8 +73,8 @@ if __name__ == "__main__":
 
     #--- Exibição dos resultados em texto ---
     print("\n1. Posição:")
-    print(f"   - Posição em t = {t_inicial}s: r({t_inicial}) = {posicao_t0[0]} î + {posicao_t0[1]} ĵ (em cm)")
-    print(f"   - Posição em t = {t_final}s: r({t_final}) = {posicao_t2[0]} î + {posicao_t2[1]} ĵ (em cm)")
+    print(f"   - Posição em t={t_inicial}s: r({t_inicial}) = {posicao_t0[0]} î + {posicao_t0[1]} ĵ (em cm)")
+    print(f"   - Posição em t={t_final}s: r({t_final}) = {posicao_t2[0]} î + {posicao_t2[1]} ĵ (em cm)")
 
     print("\n2. Velocidade Média:")
     if isinstance(v_media, np.ndarray):
@@ -83,46 +85,47 @@ if __name__ == "__main__":
         print(f"   - {v_media}")
 
     print("\n3. Velocidade Instantânea:")
-    print(f"   - Em t = {t_inicial}s: v({t_inicial}) = {velocidade_t0[0]} î + {velocidade_t0[1]} ĵ (em cm/s)")
+    print(f"   - Em t={t_inicial}s: v({t_inicial}) = {velocidade_t0[0]} î + {velocidade_t0[1]} ĵ (em cm/s)")
     print(f"     - Módulo: {modulo_t0:.2f} cm/s")
     print(f"     - Direção e Sentido: {angulo_t0}° (em relação ao eixo x positivo)")
     
-    print(f"\n   - Em t = {t_final}s: v({t_final}) = {velocidade_t2[0]} î + {velocidade_t2[1]} ĵ (em cm/s)")
+    print(f"\n   - Em t={t_final}s: v({t_final}) = {velocidade_t2[0]} î + {velocidade_t2[1]} ĵ (em cm/s)")
     print(f"     - Módulo: {modulo_t2:.2f} cm/s")
     print(f"     - Direção e Sentido: {angulo_t2:.2f}° (em relação ao eixo x positivo)")
 
-    #--- Criação do Gráfico ---
-    print("\n--- Gerando gráfico de soma vetorial... ---")
+    # --- Criação do Gráfico ---
+    print("\n--- Gerando gráfico... ---")
     
     fig, ax = plt.subplots(figsize=(10, 8))
 
-    #1. Plotar o vetor posição inicial r(0)
+    # 1. Plotar o vetor posição inicial r(0)
     ax.arrow(0, 0, posicao_t0[0], posicao_t0[1], 
             head_width=0.4, head_length=0.5, fc='purple', ec='purple', 
             length_includes_head=True, label='Vetor Posição Inicial r(0)')
 
-    #2. Plotar o vetor deslocamento Δr
+    # 2. Plotar o vetor deslocamento Δr
     ax.arrow(posicao_t0[0], posicao_t0[1], delta_r[0], delta_r[1],
             head_width=0.4, head_length=0.5, fc='red', ec='red', 
-            length_includes_head=True, label='Vetor Deslocamento Δr = r(2) - r(0)')
+            length_includes_head=True, label='Vetor Deslocamento Δr')
     
-    #3. Plotar o vetor posição final r(2)
+    # 3. Plotar o vetor posição final r(2)
     ax.arrow(0, 0, posicao_t2[0], posicao_t2[1],
             head_width=0.4, head_length=0.5, fc='black', ec='black', 
-            length_includes_head=True, label='Vetor Posição Final r(2) = r(0) + Δr')
+            length_includes_head=True, label='Vetor Posição Final r(2)')
     
-    #4. Desenhar a trajetória real
+    # 4. Desenhar a trajetória real
     t_valores = np.linspace(t_inicial, t_final, 100)
     trajetoria = np.array([calcular_vetor_posicao(t) for t in t_valores])
     ax.plot(trajetoria[:, 0], trajetoria[:, 1], color='gray', linestyle='--', label='Trajetória Real da Partícula')
 
-    #5. Marcar os pontos
+    # 5. Marcar os pontos
     ax.plot(0, 0, 'o', color='black', markersize=5, label='Origem (0,0)')
     ax.plot(posicao_t0[0], posicao_t0[1], 'o', color='purple', markersize=7)
     ax.plot(posicao_t2[0], posicao_t2[1], 'o', color='black', markersize=7)
 
-    #6. Configurações do gráfico
-    ax.set_title('Soma Vetorial: r(2) = r(0) + Δr', fontsize=16)
+    # 6. Configurações do gráfico
+    ax.set_title('Análise Gráfica da Posição e Deslocamento', fontsize=16)
+    
     ax.set_xlabel('Posição X (cm)', fontsize=12)
     ax.set_ylabel('Posição Y (cm)', fontsize=12)
     ax.legend()
