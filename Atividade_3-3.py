@@ -34,3 +34,15 @@ def calcular_velocidade_instantanea(t: float) -> np.ndarray:
     vx = 5.0 * t
     vy = 5.0
     return np.array([vx, vy])
+
+def analisar_vetor(vetor: np.ndarray) -> tuple[float, float]:
+    """
+    Calcula o módulo e a direção (ângulo em graus) de um vetor.
+    """
+    modulo = np.linalg.norm(vetor)
+    if modulo == 0:
+        #Retorna uma string para o ângulo, pois é indefinido
+        return modulo, "Indefinida"
+    angulo_rad = math.atan2(vetor[1], vetor[0])
+    angulo_graus = math.degrees(angulo_rad)
+    return modulo, angulo_graus
