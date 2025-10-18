@@ -109,15 +109,15 @@ if __name__ == "__main__":
 
     #1. Desenhar a TRAJETÓRIA REAL (como a fórmula dita: para a direita)
     ax.plot(trajetoria[:, 0], trajetoria[:, 1], 
-            color='red', 
+            color='#8B0000', 
             linewidth=4, 
             linestyle='--',
             label='Trajetória Real (Conforme a Fórmula)')
 
     #2. Plotar os vetores de posição e deslocamento
-    ax.arrow(0, 0, posicao_t0[0], posicao_t0[1], head_width=0.3, fc='purple', ec='purple', length_includes_head=True, label='r(0): Posição Inicial')
-    ax.arrow(posicao_t0[0], posicao_t0[1], delta_r[0], delta_r[1], head_width=0.3, fc='blue', ec='blue', length_includes_head=True, label='Δr: Deslocamento')
-    ax.arrow(0, 0, posicao_t2[0], posicao_t2[1], head_width=0.3, fc='black', ec='black', length_includes_head=True, label='r(2): Posição Final')
+    ax.arrow(0, 0, posicao_t0[0], posicao_t0[1], head_width=0.3, fc='#FF00FF', ec='#FF00FF', length_includes_head=True, label='r(0): Posição Inicial')
+    ax.arrow(posicao_t0[0], posicao_t0[1], delta_r[0], delta_r[1], head_width=0.3, fc='#FF4500', ec='#FF4500', length_includes_head=True, label='Δr: Deslocamento')
+    ax.arrow(0, 0, posicao_t2[0], posicao_t2[1], head_width=0.3, fc='#66CDAA', ec='#66CDAA', length_includes_head=True, label='r(2): Posição Final')
 
     #3. Configurações do gráfico
     ax.set_title("Gráfico da Fórmula: r(t) = [4.0 + 2.5t²]î + (5.0t)ĵ", fontsize=16)
