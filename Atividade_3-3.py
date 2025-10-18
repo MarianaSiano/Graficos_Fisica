@@ -25,3 +25,12 @@ def calcular_velocidade_media(t1: float, t2: float) -> np.ndarray:
     r2 = calcular_vetor_posicao(t2)
     delta_r = r2 - r1
     return delta_r / delta_t
+
+def calcular_velocidade_instantanea(t: float) -> np.ndarray:
+    """
+    Calcula o vetor velocidade instantânea v(t) para um dado tempo t.
+    Equação: v(t) = (5.0 * t)î + 5.0ĵ
+    """
+    vx = 5.0 * t
+    vy = 5.0
+    return np.array([vx, vy])
