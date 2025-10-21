@@ -12,3 +12,7 @@ print(f"Tempo para atingir o solo: {t_total: .2f} s")
 # b) Distância horizontal
 x_total = v_x * t_total
 print(f"Distância horizontal: {x_total: .2f} m")
+
+# c) Componente vertical ao atingir o solo
+vy_final = g * t_total
+print(f"Velocidade ao atingir o solo: vx = {v_x} m/s, vy = {vy_final:.2f} m/s")
