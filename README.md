@@ -19,3 +19,16 @@ a) quais são os componentes $x$ e $y$ da velocidade do cachorro? <br>
 b) Ache o módulo, a direção e o sentido da velocidade do cachorro. <br>
 
 c) Faça um desenho mostrando o vetor velocidade para $t_1$ e para $t_2$. Qual é a diferença entre esses vetores? <br>
+
+## Atividade 3.10
+Um helicóptero militar em missão de treinamento voa horizontalmente com velocidade de 60,0 m/s e acidentalmente deixa cair uma bomba (felizmente não ativa) de uma altura de 300 m. Despreze a resistência do ar. <br>
+
+a) Quanto tempo a bomba leva para atingir o solo? <br>
+
+b) Qual a distância horizontal percorrida pela bomba durante a queda? <br>
+
+c) Ache os componentes da velocidade na direção horizontal e na vertical imediatamente antes de a bomba atingir o solo. <br>
+
+d) Faça diagramas $x-t$, $y-t$, $v_x-t$ e $v_y-t$ para o movimento da bomba. <br>
+
+e) Mantida constante a velocidade do helicóptero, onde estaria ele no momento em que a bomba atingisse o solo?
