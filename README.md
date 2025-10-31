@@ -1,6 +1,8 @@
 # Atividades de Física I
 
-## Atividade 3.3
+## Capítulo 3
+
+### Atividade 3.3
 
 Um projetista de páginas da Internet cria uma animação na qual um ponto da tela do computador possui posição $\vec{r} = [4,0 \text{ cm} + (2,5 \text{ cm/s}^2)t^2]\hat{i} + (5,0 \text{ cm/s})t\hat{j}$. <br>
 
@@ -10,7 +12,7 @@ b) Ache o módulo, a direção e o sentido da velocidade instantânea para $t_1 
 
 c) Faça um desenho da trajetória do ponto no intervalo entre $t_1 = 0$ e $t_2 = 2,0 \text{ s}$ e mostre as velocidades calculadas em (b).
 
-## Atividade 3.6
+### Atividade 3.6
 
 A velocidade de um cachorro correndo em um campo aberto possui componentes $v_x = 2,6 \text{ m/s}$, $v_y = -1,8 \text{ m/s}$ para $t_1 = 10,0 \text{ s}$. Para o intervalo de tempo entre $t_1 = 10,0 \text{ s}$ e $t_2 = 20,0 \text{ s}$, a aceleração média do cachorro possui módulo igual a $0,45 \text{ m/s}^2$, formando um ângulo de $31,0^\circ$, medido considerando-se uma rotação do eixo $+Ox$ para o eixo $+Oy$. Para $t_2 = 20,0 \text{ s}$ <br>
 
@@ -20,7 +22,7 @@ b) Ache o módulo, a direção e o sentido da velocidade do cachorro. <br>
 
 c) Faça um desenho mostrando o vetor velocidade para $t_1$ e para $t_2$. Qual é a diferença entre esses vetores? <br>
 
-## Atividade 3.10
+### Atividade 3.10
 Um helicóptero militar em missão de treinamento voa horizontalmente com velocidade de 60,0 m/s e acidentalmente deixa cair uma bomba (felizmente não ativa) de uma altura de 300 m. Despreze a resistência do ar. <br>
 
 a) Quanto tempo a bomba leva para atingir o solo? <br>
@@ -32,3 +34,14 @@ c) Ache os componentes da velocidade na direção horizontal e na vertical imedi
 d) Faça diagramas $x-t$, $y-t$, $v_x-t$ e $v_y-t$ para o movimento da bomba. <br>
 
 e) Mantida constante a velocidade do helicóptero, onde estaria ele no momento em que a bomba atingisse o solo?
+
+## Capítulo 4
+
+### Atividade 4.1
+Duas forças possuem o mesmo módulo F. Qual é o ângulo entre os dois vetores quando a soma vetorial possui o módulo igual a <br>
+
+a) 2F? <br>
+
+b) $\sqrt{2}F$ <br>
+
+c) Zero? <br>
