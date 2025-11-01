@@ -1,57 +1,34 @@
 import matplotlib.pyplot as plt
 
-def corpo_livre_A(ax):
-    # Caixa A
-    ax.add_patch(plt.Rectangle((-0.6, 0), 1.2, 1.2, fc='#cccccc', ec='black', lw=2))
-    ax.text(0, 0.6, 'A', fontsize=13, ha='center', va='center')
+def desenha_caixa(ax, x, y, label, color):
+    ax.add_patch(plt.Rectangle((x-0.5, y-0.5), 1.0, 1.0, ec='black', fc=color, lw=2))
+    ax.text(x, y, label, fontsize=24, ha='center', va='center', fontweight='bold', color='black')
 
-    # Força F para direita
-    ax.arrow(-0.1, 1.2, 0.6, 0, head_width=0.12, head_length=0.2, fc='blue', ec='blue', lw=3)
-    ax.text(0.3, 1.35, r'$\vec{F}$', color='blue', fontsize=15, ha='center')
+def desenha_vetor(ax, x, y, dx, dy, cor, label, pos_label, size=3):
+    ax.arrow(x, y, dx, dy, head_width=0.12, head_length=0.19, fc=cor, ec=cor, lw=size, length_includes_head=True)
+    ax.text(pos_label[0], pos_label[1], label, color=cor, fontsize=18, va='center', ha='center', fontweight='bold')
 
-    # Força de B em A para a esquerda (ação)
-    ax.arrow(0.5, 0.6, -0.6, 0, head_width=0.12, head_length=0.2, fc='red', ec='red', lw=3)
-    ax.text(-0.35, 0.7, r'$\vec{F}_{BA}$', color='red', fontsize=15, ha='left')
+fig, ax = plt.subplots(figsize=(12, 6))
 
-    # Normal para cima
-    ax.arrow(0.6, 0.1, 0, 0.6, head_width=0.13, head_length=0.2, fc='green', ec='green', lw=3)
-    ax.text(0.7, 0.4, r'$N_A$', color='green', fontsize=14)
+# Engradado A
+desenha_caixa(ax, -2, 0, 'A', '#ffe08a')
+desenha_vetor(ax, -2, 0.4, 0, 1.2, 'green', r'$N_A$', [-2, 1.75], 3)
+desenha_vetor(ax, -2, -0.4, 0, -1.2, 'orange', r'$m_Ag$', [-2, -1.8], 3)
+desenha_vetor(ax, -1.5, 0, 1.2, 0, 'blue', r'$\vec{F}$', [-0.3, 0.1], 3)
+desenha_vetor(ax, -2.5, 0, -1.2, 0, 'red', r'$\vec{F}_{BA}$', [-3.7, 0.12], 3)
 
-    # Peso para baixo
-    ax.arrow(-0.6, 1.1, 0, -0.6, head_width=0.13, head_length=0.18, fc='orange', ec='orange', lw=3)
-    ax.text(-0.75, 0.8, r'$m_A g$', color='orange', fontsize=14)
-    ax.set_xlim(-1, 1.2)
-    ax.set_ylim(-0.2, 1.6)
-    ax.set_aspect('equal')
-    ax.set_xticks([]); ax.set_yticks([])
-    ax.set_title('Engradado A', fontsize=15)
+# Engradado B
+desenha_caixa(ax, 2, 0, 'B', '#7eccec')
+desenha_vetor(ax, 2, 0.4, 0, 1.2, 'green', r'$N_B$', [2, 1.75], 3)
+desenha_vetor(ax, 2, -0.4, 0, -1.2, 'orange', r'$m_Bg$', [2, -1.8], 3)
+desenha_vetor(ax, 1.5, 0, -1.2, 0, 'red', r'$\vec{F}_{AB}$', [0.3, -0.12], 3)
 
-def corpo_livre_B(ax):
-    # Caixa B
-    ax.add_patch(plt.Rectangle((-0.6, 0), 1.2, 1.2, fc='#cccccc', ec='black', lw=2))
-    ax.text(0, 0.6, 'B', fontsize=13, ha='center', va='center')
-
-    # Força de A em B para direita (reação)
-    ax.arrow(-0.6, 0.6, 0.6, 0, head_width=0.12, head_length=0.2, fc='red', ec='red', lw=3)
-    ax.text(0.2, 0.75, r'$\vec{F}_{AB}$', color='red', fontsize=15, ha='left')
-
-    # Normal para cima
-    ax.arrow(0.6, 0.1, 0, 0.6, head_width=0.13, head_length=0.2, fc='green', ec='green', lw=3)
-    ax.text(0.7, 0.4, r'$N_B$', color='green', fontsize=14)
-
-    # Peso para baixo
-    ax.arrow(-0.6, 1.1, 0, -0.6, head_width=0.13, head_length=0.18, fc='orange', ec='orange', lw=3)
-    ax.text(-0.75, 0.8, r'$m_B g$', color='orange', fontsize=14)
-    ax.set_xlim(-1, 1.2)
-    ax.set_ylim(-0.2, 1.6)
-    ax.set_aspect('equal')
-    ax.set_xticks([]); ax.set_yticks([])
-    ax.set_title('Engradado B', fontsize=15)
-
-fig, axs = plt.subplots(1, 2, figsize=(12, 5))
-
-corpo_livre_A(axs[0])
-corpo_livre_B(axs[1])
-
+# Configurações
+ax.text(-2, 2.1, "Engradado A", fontsize=20, ha='center')
+ax.text(2, 2.1, "Engradado B", fontsize=20, ha='center')
+ax.set_xlim(-5, 5)
+ax.set_ylim(-2.5, 2.5)
+ax.set_aspect('equal')
+ax.axis('off')
 plt.tight_layout()
 plt.show()
