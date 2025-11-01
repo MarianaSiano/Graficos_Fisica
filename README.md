@@ -45,3 +45,14 @@ a) 2F? <br>
 b) $\sqrt{2}F$ <br>
 
 c) Zero? <br>
+
+### Atividade 4.26
+Um atleta joga uma bola de massa $m$ diretamente de baixo para cima, com resistência do ar desprezível. Desenhe um diagrama do corpo livre para essa bola enquanto ela está livre da mão do atleta e <br>
+
+a) deslocando-se de baixo para cima; <br>
+
+b) no seu ponto mais alto; <br> 
+
+c) deslocando-se de cima para baixo. <br>
+
+d) Repita os itens (a), (b) e (c) considerando que o atleta joga a bola formando um ângulo de $60^{\circ}$ acima da horizontal, em vez de diretamente de baixo para cima.
