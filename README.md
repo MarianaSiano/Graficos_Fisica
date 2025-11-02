@@ -56,3 +56,15 @@ b) no seu ponto mais alto; <br>
 c) deslocando-se de cima para baixo. <br>
 
 d) Repita os itens (a), (b) e (c) considerando que o atleta joga a bola formando um ângulo de $60^{\circ}$ acima da horizontal, em vez de diretamente de baixo para cima.
+
+### Atividade 4.43
+
+Duas caixas, uma de massa de $4,0 \text{ kg}$ e outra de $6,0 \text{ kg}$, estão em repouso sobre a superfície sem atrito de um lago congelado, ligadas por uma corda leve (Figura 4.38). Uma mulher usando um tênis de solado áspero (de modo que ela possa exercer tração sobre o solo) puxa horizontalmente a caixa de $6,0 \text{ kg}$ com uma força $F$ que produz uma aceleração de $2,50 \text{ m/s}^2$. <br>
+
+a) Qual é a aceleração da caixa de $4,0 \text{ kg}$? <br>
+
+b) Desenhe um diagrama do corpo livre para a caixa de $4,0 \text{ kg}$. Use esse diagrama e a segunda lei de Newton para achar a tensão $T$ na corda que conecta as duas caixas. <br>
+
+c) Desenhe um diagrama do corpo livre para a caixa de $6,0 \text{ kg}$. Qual é a direção da força resultante sobre a caixa de $6,0 \text{ kg}$? Qual tem o maior módulo, a força $T$ ou a força $F$? <br>
+
+d) Use a parte (c) e a segunda lei de Newton para calcular o módulo da força $F$. <br>
