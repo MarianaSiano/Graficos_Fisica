@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import numpy as np
-# Removido o 'import os'
 
 def plot_vectors_corrigido(case):
     """

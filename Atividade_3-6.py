@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import numpy as np
-import os
 
 #--- Dados do Problema ---
 #Vetor velocidade inicial v1 em t1 = 10.0s
