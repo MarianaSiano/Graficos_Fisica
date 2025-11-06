@@ -38,4 +38,4 @@ def draw_chair_diagram(ax):
 fig, ax = plt.subplots(figsize=(7, 7))
 draw_chair_diagram(ax)
 plt.tight_layout()
-plt.show()
+plt.savefig('./diagramas/figure_4-31.png')

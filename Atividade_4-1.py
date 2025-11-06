@@ -1,7 +1,12 @@
 import matplotlib.pyplot as plt
 import numpy as np
+# Removido o 'import os'
 
 def plot_vectors_corrigido(case):
+    """
+    Cria um gráfico para o caso de soma de vetores especificado
+    e guarda-o num ficheiro em vez de o mostrar.
+    """
     F = 1
     plt.figure(figsize=(5,5))
     plt.axis('equal')
@@ -33,9 +38,21 @@ def plot_vectors_corrigido(case):
         plt.quiver(0, -0.05, B[0], B[1], color='b', angles='xy', scale_units='xy', scale=1, label='B')
         plt.scatter([0], [0], color='g', s=60, label='R (nula)')
         plt.title('c) Ângulo 180° (módulo zero)')
+    
     plt.legend(loc='upper right')
-    plt.show()
+    
+    # Define o nome do ficheiro com base no caso
+    nome_ficheiro = f"./graficos/figure_4-1{case}.png"
+    
+    # Guarda a figura (irá falhar se o diretório 'graficos' não existir)
+    plt.savefig(nome_ficheiro)
+    
+    # Fecha a figura para libertar memória e evitar que seja mostrada
+    plt.close(plt.gcf()) 
 
-# Gera os três desenhos corrigidos
-for caso in ['a', 'b', 'c']:
-    plot_vectors_corrigido(caso)
+# --- Execução Principal ---
+if __name__ == "__main__":
+    print("A gerar e guardar os gráficos...")
+    for caso in ['a', 'b', 'c']:
+        plot_vectors_corrigido(caso)
+    print("Processo concluído.")

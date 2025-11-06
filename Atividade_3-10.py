@@ -51,4 +51,4 @@ plt.xlabel('Tempo (s)')
 plt.ylabel('vy (m/s)')
 
 plt.tight_layout()
-plt.savefig('graficos/figure-3-10.png')
+plt.savefig('./graficos/figure-3-10.png')

@@ -69,4 +69,4 @@ corpo_livre_bola_livre(axs[1,2], titulos2[2])
 corpo_livre_bola_livre(axs[1,3], titulos2[3])
 
 plt.tight_layout()
-plt.show()
+plt.savefig('./diagramas/figure_4-26.png')

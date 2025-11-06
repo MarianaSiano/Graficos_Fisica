@@ -26,4 +26,4 @@ ax.axis('off')
 ax.set_title('Diagrama de Corpo Livre\nHomem parando após queda', fontsize=13)
 plt.tight_layout()
 
-plt.show()
+plt.savefig('./diagramas/figure_4-51.png')
