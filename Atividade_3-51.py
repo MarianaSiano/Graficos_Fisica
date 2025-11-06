@@ -11,10 +11,6 @@ fig, ax = plt.subplots(figsize=(4, 7))
 body = patches.Rectangle((0.4, 1.5), 0.2, 2, edgecolor='black', facecolor='lightgray')
 ax.add_patch(body)
 
-# Linha do chão
-plt.plot([0, 1], [1.5, 1.5], color="saddlebrown", linewidth=3, label="Chão")
-plt.text(0.8, 1.35, "Chão", color="saddlebrown")
-
 # Força normal (F_normal) para cima
 ax.arrow(0.5, 3.5, 0, 1.5, head_width=0.09, head_length=0.2, fc='red', ec='red', length_includes_head=True)
 ax.text(0.57, 4.8, f'Força Normal (N = {F_normal} N)', color='red', fontsize=11)
