@@ -78,3 +78,17 @@ a) Qual é sua velocidade no momento em que os pés tocam o solo?  <br>
 b) Qual é sua aceleração (módulo e direção) quando ele diminui de velocidade, supondo uma aceleração constante? <br>
 
 c) Desenhe o diagrama do corpo livre para ele (Seção 4.6). Em termos das forças que atuam no diagrama, qual é a força resultante sobre ele? Use as leis de Newton e os resultados do item (b) para calcular a força média que os pés dele exercem sobre o solo enquanto ele diminui de velocidade. Expresse essa força em newtons e também como um múltiplo do peso dele. <br>
+
+### Atividade 4.54
+
+Os dois blocos indicados na Figura 4.39 estão ligados por uma corda uniforme e pesada, com massa de 4,0 kg. Uma força de 200 N é aplicada de baixo para cima conforme indicado. <br>
+
+a) Desenhe três diagramas do corpo livre, um para o bloco de 6,0 kg, um para a corda de 4,0 kg e outro para o bloco de 5,0 kg. Para cada força, indique qual é o corpo que exerce a referida força. <br>
+
+b) Qual é a aceleração do sistema? <br>
+
+c) Qual é a tensão no topo da pesada corda? <br>
+
+d) Qual é a tensão no meio da corda? <br>
+
+![Figura 4.39](./imagens/Figura_4-39.png)
