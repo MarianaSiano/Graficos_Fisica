@@ -3,7 +3,7 @@ import matplotlib.patches as patches
 
 # Valores aproximados para as forças (ajuste F_normal conforme cálculo)
 peso = 75 * 9.8 # Peso em N
-F_normal = 2500 # Exemplo: valor a ser ajustado conforme o cálculo correto
+F_normal = 3800
 
 fig, ax = plt.subplots(figsize=(4, 7))
 
