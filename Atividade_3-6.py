@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 
 #--- Dados do Problema ---
 #Vetor velocidade inicial v1 em t1 = 10.0s
@@ -47,5 +48,4 @@ ax.set_xlabel('Componente x da Velocidade ($v_x$) [m/s]', fontsize=12)
 ax.set_ylabel('Componente y da Velocidade ($v_y$) [m/s]', fontsize=12)
 ax.legend(fontsize=12, loc='upper left')
 
-#Mostra o gráfico final
-plt.show()
+plt.savefig('./graficos/figure_3-6.png')

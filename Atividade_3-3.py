@@ -1,6 +1,7 @@
 import numpy as np
 import math
 import matplotlib.pyplot as plt
+import os
 
 #--- DEFINIÇÃO DAS FUNÇÕES DE CÁLCULO ---
 
@@ -139,4 +140,4 @@ if __name__ == "__main__":
     plt.xlim(-2, 26)
     plt.ylim(-2, 17)
 
-    plt.show()
+    plt.savefig('./graficos/figure_3-3.png')
