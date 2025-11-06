@@ -68,3 +68,13 @@ b) Desenhe um diagrama do corpo livre para a caixa de $4,0 \text{ kg}$. Use esse
 c) Desenhe um diagrama do corpo livre para a caixa de $6,0 \text{ kg}$. Qual é a direção da força resultante sobre a caixa de $6,0 \text{ kg}$? Qual tem o maior módulo, a força $T$ ou a força $F$? <br>
 
 d) Use a parte (c) e a segunda lei de Newton para calcular o módulo da força $F$. <br>
+
+### Atividade 4.51
+
+Pulando para o solo. Um homem de 75,0 kg pula de uma plataforma de 3,10 m de altura acima do solo. Ele mantém as pernas esticadas à medida que cai, mas no momento em que os pés tocam o solo, os joelhos começam a se dobrar, e, considerando-o uma partícula, ele se move 0,60 m antes de parar. <br>
+
+a) Qual é sua velocidade no momento em que os pés tocam o solo?  <br>
+
+b) Qual é sua aceleração (módulo e direção) quando ele diminui de velocidade, supondo uma aceleração constante? <br>
+
+c) Desenhe o diagrama do corpo livre para ele (Seção 4.6). Em termos das forças que atuam no diagrama, qual é a força resultante sobre ele? Use as leis de Newton e os resultados do item (b) para calcular a força média que os pés dele exercem sobre o solo enquanto ele diminui de velocidade. Expresse essa força em newtons e também como um múltiplo do peso dele. <br>
