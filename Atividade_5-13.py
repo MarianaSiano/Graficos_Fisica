@@ -26,8 +26,8 @@ plt.arrow(x0, y0, 0, -0.14, head_width=0.02, head_length=0.03, color='blue', len
 plt.text(x0-0.02, y0-0.14, 'P', fontsize=14, color='blue')
 
 # Tensão
-plt.arrow(x0, y0, comprimento_fio*np.sin(angulo)*0.85, comprimento_fio*np.cos(angulo)*0.85,head_width=0.02, head_length=0.03, color='green', length_includes_head=True)
-plt.text(x0+comprimento_fio*np.sin(angulo)*0.65, y0+comprimento_fio*np.cos(angulo)*0.70, 'T', fontsize=14, color='green')
+plt.arrow(x0, y0, comprimento_fio * np.sin(angulo) * 0.85, comprimento_fio * np.cos(angulo)*0.85,head_width=0.02, head_length=0.03, color='green', length_includes_head=True)
+plt.text(x0 + comprimento_fio * np.sin(angulo) * 0.65, y0 + comprimento_fio * np.cos(angulo) * 0.70, 'T', fontsize=14, color='green')
 
 # Força normal da parede
 plt.arrow(x0, y0, -0.15, 0, head_width=0.02, head_length=0.03, color='red', length_includes_head=True)
