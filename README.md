@@ -92,3 +92,13 @@ c) Qual é a tensão no topo da pesada corda? <br>
 d) Qual é a tensão no meio da corda? <br>
 
 ![Figura 4.39](./imagens/Figura_4-39.png)
+
+### Atividade 5.27
+
+As duas etapas iniciais para aplicar a segunda lei de Newton para resolver um problema são isolar um corpo para análise e, a seguir, fazer um diagrama do corpo livre para indicar as forças que atuam sobre o corpo escolhido. Desenhe diagramas do corpo livre para as seguintes situações: <br>
+
+a) um bloco de massa M deslizando para baixo ao longo de um plano inclinado, sem atrito e formando um ângulo $\alpha$ com a horizontal; <br>
+
+b) um bloco de massa M deslizando para cima ao longo de um plano inclinado, sem atrito e formando um ângulo $\alpha$ com a horizontal; <br>
+
+c) um bloco de massa M deslizando para cima ao longo de um plano inclinado com atrito cinético, formando um ângulo $\alpha$ com a horizontal. <br>
