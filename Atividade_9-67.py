@@ -23,35 +23,47 @@ omega = 1.20 * t ** 2
 # (Derivado de: integral de 1.20t^2)
 theta = 0.40 * t ** 3
 
-# 4. Plotagem dos gráficos
-fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(8, 10), sharex=True)
+# 4. Plotagem dos gráficos SEPARADOS
 
-# Gráfico da Aceleração Angular
-ax1.plot(t, alpha, color='red', linewidth=2, label=r'$\alpha(t) = 2,40t$')
-ax1.set_ylabel(r'Acel. Angular $\alpha$ ($rad/s^2$)', fontsize=12)
-ax1.set_title('Cinemática Rotacional do Disco (Problema 9.67)', fontsize=14)
-ax1.grid(True, linestyle='--', alpha=0.7)
-ax1.legend()
+# --- Gráfico 1: Aceleração Angular ---
+plt.figure(figsize=(8, 6))
+plt.plot(t, alpha, color='red', linewidth=2, label=r'$\alpha(t) = 2,40t$')
+plt.ylabel(r'Acel. Angular $\alpha$ ($rad/s^2$)', fontsize=12)
+plt.xlabel('Tempo (s)', fontsize=12)
+plt.title('Aceleração Angular do Disco (9.67)', fontsize=14)
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.legend()
+plt.tight_layout()
+plt.savefig('./graficos/figure_9-67_aceleracao.png')
+plt.close()
 
-# Gráfico da Velocidade Angular
-ax2.plot(t, omega, color='blue', linewidth=2, label=r'$\omega(t) = 1,20t^2$')
-ax2.set_ylabel(r'Vel. Angular $\omega$ ($rad/s$)', fontsize=12)
-ax2.grid(True, linestyle='--', alpha=0.7)
-ax2.legend()
+# --- Gráfico 2: Velocidade Angular ---
+plt.figure(figsize=(8, 6))
+plt.plot(t, omega, color='blue', linewidth=2, label=r'$\omega(t) = 1,20t^2$')
+plt.ylabel(r'Vel. Angular $\omega$ ($rad/s$)', fontsize=12)
+plt.xlabel('Tempo (s)', fontsize=12)
+plt.title('Velocidade Angular do Disco (9.67)', fontsize=14)
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.legend()
 
 # Destacar o ponto de interesse (15 rad/s)
-t_alvo = np.sqrt(15.0 / 1.20) # t aprox 3.54s
-ax2.scatter([t_alvo], [15.0], color='black', zorder=5)
-
-# Adicionado 'r' antes do f-string para corrigir o erro de sintaxe do \omega
-ax2.annotate(rf't={t_alvo:.2f}s\n$\omega$=15 rad/s', xy=(t_alvo, 15), xytext=(t_alvo-1.5, 15), arrowprops=dict(facecolor='black', shrink=0.05))
-
-# Gráfico da Posição Angular
-ax3.plot(t, theta, color='green', linewidth=2, label=r'$\theta(t) = 0,40t^3$')
-ax3.set_ylabel(r'Posição Angular $\theta$ ($rad$)', fontsize=12)
-ax3.set_xlabel('Tempo (s)', fontsize=12)
-ax3.grid(True, linestyle='--', alpha=0.7)
-ax3.legend()
+t_alvo = np.sqrt(15.0 / 1.20) 
+plt.scatter([t_alvo], [15.0], color='black', zorder=5)
+# Correção do SyntaxWarning: string raw (rf)
+plt.annotate(rf't={t_alvo:.2f}s\n$\omega$=15 rad/s', xy=(t_alvo, 15), xytext=(t_alvo-1.5, 15), arrowprops=dict(facecolor='black', shrink=0.05))
 
 plt.tight_layout()
-plt.savefig('./graficos/figure_9-67.png')
+plt.savefig('./graficos/figure_9-67_velocidade.png')
+plt.close()
+
+# --- Gráfico 3: Posição Angular ---
+plt.figure(figsize=(8, 6))
+plt.plot(t, theta, color='green', linewidth=2, label=r'$\theta(t) = 0,40t^3$')
+plt.ylabel(r'Posição Angular $\theta$ ($rad$)', fontsize=12)
+plt.xlabel('Tempo (s)', fontsize=12)
+plt.title('Posição Angular do Disco (9.67)', fontsize=14)
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.legend()
+plt.tight_layout()
+plt.savefig('./graficos/figure_9-67_posicao.png')
+plt.close()
